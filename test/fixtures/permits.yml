@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  permit_number: MyString
+  issued_date: 2014-10-21
+  expiry_date: 2014-10-21
+  permitowner_id: 1
+
+two:
+  permit_number: MyString
+  issued_date: 2014-10-21
+  expiry_date: 2014-10-21
+  permitowner_id: 1

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  offence_id: 1
+  permit_id: 1
+  permitofficer_id: 1
+  openning_date: 2014-10-21
+  closing_date: 2014-10-21
+
+two:
+  offence_id: 1
+  permit_id: 1
+  permitofficer_id: 1
+  openning_date: 2014-10-21
+  closing_date: 2014-10-21

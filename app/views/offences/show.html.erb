@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @offence.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @offence.description %>
+</p>
+
+<p>
+  <strong>Charge fee:</strong>
+  <%= @offence.charge_fee %>
+</p>
+
+<%= link_to 'Edit', edit_offence_path(@offence) %> |
+<%= link_to 'Back', offences_path %>

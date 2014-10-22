@@ -1,0 +1,49 @@
+<%= form_for(@trafficofficer) do |f| %>
+  <% if @trafficofficer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trafficofficer.errors.count, "error") %> prohibited this trafficofficer from being saved:</h2>
+
+      <ul>
+      <% @trafficofficer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :middlename %><br>
+    <%= f.text_field :middlename %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :hashed_password %><br>
+    <%= f.text_field :hashed_password %>
+  </div>
+  <div class="field">
+    <%= f.label :salt %><br>
+    <%= f.text_field :salt %>
+  </div>
+  <div class="field">
+    <%= f.label :national_id_no %><br>
+    <%= f.text_field :national_id_no %>
+  </div>
+  <div class="field">
+    <%= f.label :role_id %><br>
+    <%= f.number_field :role_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

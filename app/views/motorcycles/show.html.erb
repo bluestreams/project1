@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @motorcycle.title %>
+</p>
+
+<p>
+  <strong>Motor cycle type:</strong>
+  <%= @motorcycle.motor_cycle_type %>
+</p>
+
+<p>
+  <strong>Motor cycle modle:</strong>
+  <%= @motorcycle.motor_cycle_modle %>
+</p>
+
+<p>
+  <strong>Owner passport:</strong>
+  <%= @motorcycle.owner_passport %>
+</p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @motorcycle.entry_date %>
+</p>
+
+<p>
+  <strong>Vehiclemanager:</strong>
+  <%= @motorcycle.vehiclemanager_id %>
+</p>
+
+<p>
+  <strong>Shipped from:</strong>
+  <%= @motorcycle.shipped_from %>
+</p>
+
+<%= link_to 'Edit', edit_motorcycle_path(@motorcycle) %> |
+<%= link_to 'Back', motorcycles_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offence:</strong>
+  <%= @offencecause.offence_id %>
+</p>
+
+<p>
+  <strong>Permit:</strong>
+  <%= @offencecause.permit_id %>
+</p>
+
+<p>
+  <strong>Permitofficer:</strong>
+  <%= @offencecause.permitofficer_id %>
+</p>
+
+<p>
+  <strong>Openning date:</strong>
+  <%= @offencecause.openning_date %>
+</p>
+
+<p>
+  <strong>Closing date:</strong>
+  <%= @offencecause.closing_date %>
+</p>
+
+<%= link_to 'Edit', edit_offencecause_path(@offencecause) %> |
+<%= link_to 'Back', offencecauses_path %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @vehiclemanager.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @vehiclemanager.lastname %>
+</p>
+
+<p>
+  <strong>Middlename:</strong>
+  <%= @vehiclemanager.middlename %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @vehiclemanager.username %>
+</p>
+
+<p>
+  <strong>Hashed password:</strong>
+  <%= @vehiclemanager.hashed_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @vehiclemanager.salt %>
+</p>
+
+<p>
+  <strong>National id no:</strong>
+  <%= @vehiclemanager.national_id_no %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @vehiclemanager.role_id %>
+</p>
+
+<%= link_to 'Edit', edit_vehiclemanager_path(@vehiclemanager) %> |
+<%= link_to 'Back', vehiclemanagers_path %>

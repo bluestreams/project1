@@ -1,0 +1,37 @@
+<h1>Listing motorcycles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Motor cycle type</th>
+      <th>Motor cycle modle</th>
+      <th>Owner passport</th>
+      <th>Entry date</th>
+      <th>Vehiclemanager</th>
+      <th>Shipped from</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @motorcycles.each do |motorcycle| %>
+      <tr>
+        <td><%= motorcycle.title %></td>
+        <td><%= motorcycle.motor_cycle_type %></td>
+        <td><%= motorcycle.motor_cycle_modle %></td>
+        <td><%= motorcycle.owner_passport %></td>
+        <td><%= motorcycle.entry_date %></td>
+        <td><%= motorcycle.vehiclemanager_id %></td>
+        <td><%= motorcycle.shipped_from %></td>
+        <td><%= link_to 'Show', motorcycle %></td>
+        <td><%= link_to 'Edit', edit_motorcycle_path(motorcycle) %></td>
+        <td><%= link_to 'Destroy', motorcycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Motorcycle', new_motorcycle_path %>

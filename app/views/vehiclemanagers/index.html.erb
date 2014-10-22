@@ -1,0 +1,39 @@
+<h1>Listing vehiclemanagers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Middlename</th>
+      <th>Username</th>
+      <th>Hashed password</th>
+      <th>Salt</th>
+      <th>National id no</th>
+      <th>Role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehiclemanagers.each do |vehiclemanager| %>
+      <tr>
+        <td><%= vehiclemanager.firstname %></td>
+        <td><%= vehiclemanager.lastname %></td>
+        <td><%= vehiclemanager.middlename %></td>
+        <td><%= vehiclemanager.username %></td>
+        <td><%= vehiclemanager.hashed_password %></td>
+        <td><%= vehiclemanager.salt %></td>
+        <td><%= vehiclemanager.national_id_no %></td>
+        <td><%= vehiclemanager.role_id %></td>
+        <td><%= link_to 'Show', vehiclemanager %></td>
+        <td><%= link_to 'Edit', edit_vehiclemanager_path(vehiclemanager) %></td>
+        <td><%= link_to 'Destroy', vehiclemanager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vehiclemanager', new_vehiclemanager_path %>

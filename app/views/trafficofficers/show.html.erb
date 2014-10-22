@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @trafficofficer.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @trafficofficer.lastname %>
+</p>
+
+<p>
+  <strong>Middlename:</strong>
+  <%= @trafficofficer.middlename %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @trafficofficer.username %>
+</p>
+
+<p>
+  <strong>Hashed password:</strong>
+  <%= @trafficofficer.hashed_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @trafficofficer.salt %>
+</p>
+
+<p>
+  <strong>National id no:</strong>
+  <%= @trafficofficer.national_id_no %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @trafficofficer.role_id %>
+</p>
+
+<%= link_to 'Edit', edit_trafficofficer_path(@trafficofficer) %> |
+<%= link_to 'Back', trafficofficers_path %>

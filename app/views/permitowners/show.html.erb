@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @permitowner.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @permitowner.lastname %>
+</p>
+
+<p>
+  <strong>Middlename:</strong>
+  <%= @permitowner.middlename %>
+</p>
+
+<p>
+  <strong>Citizenship:</strong>
+  <%= @permitowner.citizenship %>
+</p>
+
+<p>
+  <strong>Current address:</strong>
+  <%= @permitowner.current_address %>
+</p>
+
+<p>
+  <strong>Home address:</strong>
+  <%= @permitowner.home_address %>
+</p>
+
+<p>
+  <strong>Passport no:</strong>
+  <%= @permitowner.passport_no %>
+</p>
+
+<p>
+  <strong>Home phone no:</strong>
+  <%= @permitowner.home_phone_no %>
+</p>
+
+<p>
+  <strong>Mobile no:</strong>
+  <%= @permitowner.mobile_no %>
+</p>
+
+<p>
+  <strong>Permit:</strong>
+  <%= @permitowner.permit_id %>
+</p>
+
+<%= link_to 'Edit', edit_permitowner_path(@permitowner) %> |
+<%= link_to 'Back', permitowners_path %>

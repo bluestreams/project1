@@ -1,0 +1,57 @@
+<%= form_for(@permitowner) do |f| %>
+  <% if @permitowner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@permitowner.errors.count, "error") %> prohibited this permitowner from being saved:</h2>
+
+      <ul>
+      <% @permitowner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :middlename %><br>
+    <%= f.text_field :middlename %>
+  </div>
+  <div class="field">
+    <%= f.label :citizenship %><br>
+    <%= f.text_field :citizenship %>
+  </div>
+  <div class="field">
+    <%= f.label :current_address %><br>
+    <%= f.text_field :current_address %>
+  </div>
+  <div class="field">
+    <%= f.label :home_address %><br>
+    <%= f.text_field :home_address %>
+  </div>
+  <div class="field">
+    <%= f.label :passport_no %><br>
+    <%= f.text_field :passport_no %>
+  </div>
+  <div class="field">
+    <%= f.label :home_phone_no %><br>
+    <%= f.text_field :home_phone_no %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_no %><br>
+    <%= f.text_field :mobile_no %>
+  </div>
+  <div class="field">
+    <%= f.label :permit_id %><br>
+    <%= f.number_field :permit_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

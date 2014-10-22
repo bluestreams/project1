@@ -1,0 +1,43 @@
+<h1>Listing permitowners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Middlename</th>
+      <th>Citizenship</th>
+      <th>Current address</th>
+      <th>Home address</th>
+      <th>Passport no</th>
+      <th>Home phone no</th>
+      <th>Mobile no</th>
+      <th>Permit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @permitowners.each do |permitowner| %>
+      <tr>
+        <td><%= permitowner.firstname %></td>
+        <td><%= permitowner.lastname %></td>
+        <td><%= permitowner.middlename %></td>
+        <td><%= permitowner.citizenship %></td>
+        <td><%= permitowner.current_address %></td>
+        <td><%= permitowner.home_address %></td>
+        <td><%= permitowner.passport_no %></td>
+        <td><%= permitowner.home_phone_no %></td>
+        <td><%= permitowner.mobile_no %></td>
+        <td><%= permitowner.permit_id %></td>
+        <td><%= link_to 'Show', permitowner %></td>
+        <td><%= link_to 'Edit', edit_permitowner_path(permitowner) %></td>
+        <td><%= link_to 'Destroy', permitowner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Permitowner', new_permitowner_path %>

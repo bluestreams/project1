@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @permitofficer.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @permitofficer.lastname %>
+</p>
+
+<p>
+  <strong>Middlename:</strong>
+  <%= @permitofficer.middlename %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @permitofficer.username %>
+</p>
+
+<p>
+  <strong>Hashed password:</strong>
+  <%= @permitofficer.hashed_password %>
+</p>
+
+<p>
+  <strong>Salt:</strong>
+  <%= @permitofficer.salt %>
+</p>
+
+<p>
+  <strong>National id no:</strong>
+  <%= @permitofficer.national_id_no %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @permitofficer.role_id %>
+</p>
+
+<%= link_to 'Edit', edit_permitofficer_path(@permitofficer) %> |
+<%= link_to 'Back', permitofficers_path %>

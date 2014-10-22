@@ -1,0 +1,39 @@
+<h1>Listing trafficofficers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Middlename</th>
+      <th>Username</th>
+      <th>Hashed password</th>
+      <th>Salt</th>
+      <th>National id no</th>
+      <th>Role</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trafficofficers.each do |trafficofficer| %>
+      <tr>
+        <td><%= trafficofficer.firstname %></td>
+        <td><%= trafficofficer.lastname %></td>
+        <td><%= trafficofficer.middlename %></td>
+        <td><%= trafficofficer.username %></td>
+        <td><%= trafficofficer.hashed_password %></td>
+        <td><%= trafficofficer.salt %></td>
+        <td><%= trafficofficer.national_id_no %></td>
+        <td><%= trafficofficer.role_id %></td>
+        <td><%= link_to 'Show', trafficofficer %></td>
+        <td><%= link_to 'Edit', edit_trafficofficer_path(trafficofficer) %></td>
+        <td><%= link_to 'Destroy', trafficofficer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trafficofficer', new_trafficofficer_path %>

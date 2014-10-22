@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @vehicle.title %>
+</p>
+
+<p>
+  <strong>Vehicle type:</strong>
+  <%= @vehicle.vehicle_type %>
+</p>
+
+<p>
+  <strong>Vehicle modle:</strong>
+  <%= @vehicle.vehicle_modle %>
+</p>
+
+<p>
+  <strong>Owner passport:</strong>
+  <%= @vehicle.owner_passport %>
+</p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @vehicle.entry_date %>
+</p>
+
+<p>
+  <strong>Vehiclemanager:</strong>
+  <%= @vehicle.vehiclemanager_id %>
+</p>
+
+<p>
+  <strong>Shipped from:</strong>
+  <%= @vehicle.shipped_from %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  motor_cycle_type: MyString
+  motor_cycle_modle: MyString
+  owner_passport: MyString
+  entry_date: MyString
+  vehiclemanager_id: 1
+  shipped_from: MyString
+
+two:
+  title: MyString
+  motor_cycle_type: MyString
+  motor_cycle_modle: MyString
+  owner_passport: MyString
+  entry_date: MyString
+  vehiclemanager_id: 1
+  shipped_from: MyString
