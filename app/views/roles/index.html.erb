@@ -1,6 +1,10 @@
-<h1>Listing roles</h1>
+<% @page_title="List of roles" %>
 
-<table>
+<h4><%= link_to 'Add New Role', new_role_path %></h4>
+
+<h4>Roles</h4>
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -14,14 +18,11 @@
       <tr>
         <td><%= role.title %></td>
         <td><%= role.description %></td>
-        <td><%= link_to 'Show', role %></td>
-        <td><%= link_to 'Edit', edit_role_path(role) %></td>
-        <td><%= link_to 'Destroy', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', role %> |
+          <%= link_to 'Edit', edit_role_path(role) %> |
+          <%= link_to 'Delete', role, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Role', new_role_path %>

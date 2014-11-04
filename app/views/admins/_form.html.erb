@@ -1,49 +1,100 @@
 <%= form_for(@admin) do |f| %>
   <% if @admin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-10">
+        <div id="error_explanation">
+          <div><%= pluralize(@admin.errors.count, "error") %> prohibited this admin from being saved:</div>
 
-      <ul>
-      <% @admin.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+          <% @admin.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :firstname %><br>
-    <%= f.text_field :firstname %>
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">First name</label>
+      <div class="col-sm-5">
+      <%= f.text_field :firstname, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :lastname %><br>
-    <%= f.text_field :lastname %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">Last name</label>
+      <div class="col-sm-5">
+      <%= f.text_field :lastname, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :middlename %><br>
-    <%= f.text_field :middlename %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">Middle name</label>
+      <div class="col-sm-5">
+      <%= f.text_field :middlename, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">National ID</label>
+      <div class="col-sm-5">
+      <%= f.text_field :national_id_no, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :hashed_password %><br>
-    <%= f.text_field :hashed_password %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">Username</label>
+      <div class="col-sm-5">
+      <%= f.text_field :username, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :salt %><br>
-    <%= f.text_field :salt %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">Password</label>
+      <div class="col-sm-5">
+      <%= f.password_field :password, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :national_id_no %><br>
-    <%= f.text_field :national_id_no %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">Confirm password</label>
+      <div class="col-sm-5">
+      <%= f.password_field :password_confirmation, :class=>"form-control" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :role_id %><br>
-    <%= f.number_field :role_id %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <label class="col-sm-3 control-label" style="text-align:right;">Role</label>
+      <div class="col-sm-5">
+      <%= f.select(:role_id, @roles.collect{|r| [r.title, r.id]}, {:include_blank=>"select role"},{:class=>"form-control"}) %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="form-group">  
+      <div class="col-sm-3"></div>
+      <div class="col-sm-5">
+      <%= f.submit %>
+      </div>
+    </div>
   </div>
+
 <% end %>

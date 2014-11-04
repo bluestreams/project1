@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || "Police" %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+	<div class="row"> 
+		<div class="col-sm-3"></div>
+		<div class="col-sm-9">
+			<div class="jumbotron" style="padding:10px;">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'session/login'
+
+  get 'session/logout'
+
+  get 'session/index'
+
+  get 'session/admin'
+
+  get 'session/officer'
+
+  get 'session/vehicle_manager'
+  get 'session/create'
+
   resources :roles
 
   resources :offencecauses
@@ -23,7 +36,7 @@ Rails.application.routes.draw do
 
   resources :vehicles
 
-  root :to=>"admins#index"
+  root :to=>"session#login"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

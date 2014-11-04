@@ -1,6 +1,7 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
 
+  layout 'admin'
   # GET /admins
   # GET /admins.json
   def index
@@ -15,15 +16,18 @@ class AdminsController < ApplicationController
   # GET /admins/new
   def new
     @admin = Admin.new
+    @roles =Role.all
   end
 
   # GET /admins/1/edit
   def edit
+    @roles =Role.all
   end
 
   # POST /admins
   # POST /admins.json
   def create
+    @roles =Role.all
     @admin = Admin.new(admin_params)
 
     respond_to do |format|
@@ -40,6 +44,7 @@ class AdminsController < ApplicationController
   # PATCH/PUT /admins/1
   # PATCH/PUT /admins/1.json
   def update
+    @roles =Role.all
     respond_to do |format|
       if @admin.update(admin_params)
         format.html { redirect_to @admin, notice: 'Admin was successfully updated.' }
