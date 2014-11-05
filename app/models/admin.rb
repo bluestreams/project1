@@ -1,6 +1,5 @@
 class Admin < ActiveRecord::Base
 	require 'digest/sha2'
-
 	validates :username, :national_id_no, :presence=>true, :uniqueness=>true
 	validates :firstname, :lastname, :presence=>true
 
